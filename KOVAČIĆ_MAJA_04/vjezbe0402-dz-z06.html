@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.zadatak</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+function zbroji() {
+			var prviBroj = parseInt(document.getElementById("prviBroj").value);
+			var drugiBroj = parseInt(document.getElementById("drugiBroj").value);
+			var rezultat = prviBroj + drugiBroj;
+			document.getElementById("rezultat").value = rezultat;
+		}
+
+    </script>
+
+<form>
+    <label for="prviBroj">Prvi broj:</label>
+    <input type="number" id="prviBroj" name="prviBroj" required>
+    <br>
+    <label for="drugiBroj">Drugi broj:</label>
+    <input type="number" id="drugiBroj" name="drugiBroj" required>
+    <br>
+    <button type="button" onclick="zbroji()">Zbroji</button>
+    <br>
+    <label for="rezultat">Rezultat:</label>
+    <input type="number" id="rezultat" name="rezultat" readonly>
+</form>
+    
+</body>
+</html>

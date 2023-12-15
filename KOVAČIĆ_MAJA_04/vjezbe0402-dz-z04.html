@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.zadatak</title>
+</head>
+<body>
+
+    <form id="ocjenaForma">
+        <label for="ocjena">Unesite ocjenu (1-5):</label>
+        <input type="number" id="ocjena" min="1" max="5">
+        <button type="button" onclick="ispisiOcjenjeno()">Provjeri ocjenu</button>
+      </form>
+    
+      <p id="rezultatOcjene"></p>
+    
+    <script type="text/javascript">
+
+function ispisiOcjenjeno() {
+      const ocjenaInput = document.getElementById('ocjena');
+      const ocjena = parseInt(ocjenaInput.value);
+
+      let rezultat = '';
+
+      switch (ocjena) {
+        case 1:
+          rezultat = 'Nedovoljan';
+          break;
+        case 2:
+          rezultat = 'Dovoljan';
+          break;
+        case 3:
+          rezultat = 'Dobar';
+          break;
+        case 4:
+          rezultat = 'Vrlo dobar';
+          break;
+        case 5:
+          rezultat = 'Odličan';
+          break;
+        default:
+          rezultat = 'Molimo unesite ocjenu od 1 do 5';
+          break;
+      }
+
+      document.getElementById('rezultatOcjene').innerText = rezultat;
+    }
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9.zadatak</title>
+    <style>
+		#zarulja {
+			width: 349px;
+			height: 530px;
+			background-image: url('zarulja_off_2.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		#prekidac {
+			width: 174px;
+			height: 336px;
+			background-image: url('off-removebg-preview.png');
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+    <script type="text/javascript">
+function toggleZarulja() {
+			var zarulja = document.getElementById('zarulja');
+			var prekidac = document.getElementById('prekidac');
+			if (prekidac.classList.contains('on')) {
+				zarulja.style.backgroundImage = 'url("zarulja_off_2.png")';
+				prekidac.style.backgroundImage = 'url("off-removebg-preview.png")';
+				prekidac.classList.remove('on');
+			} else {
+				zarulja.style.backgroundImage = 'url("zarulja_on_2.png")';
+				prekidac.style.backgroundImage = 'url("on-removebg-preview.png")';
+				prekidac.classList.add('on');
+			}
+		}
+    </script>
+    <div id="zarulja"></div>
+	<div id="prekidac" onclick="toggleZarulja()"></div>
+</body>
+</html>

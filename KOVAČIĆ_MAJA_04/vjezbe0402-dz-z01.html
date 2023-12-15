@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.zadatak</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+ function calculateMeans() {
+      let numbers = prompt("Unesite prirodne brojeve odvojene zarezom:", "1, 2, 3");
+      
+    
+      let numberArray = numbers.split(",").map(Number);
+      
+      let sum = 0;
+      for (let i = 0; i < numberArray.length; i++) {
+        sum += numberArray[i];
+      }
+      let arithmeticMean = sum / numberArray.length;
+      
+      let product = 1;
+      for (let i = 0; i < numberArray.length; i++) {
+        product *= numberArray[i];
+      }
+      let geometricMean = Math.pow(product, 1 / numberArray.length);
+      
+      let resultDiv = document.createElement("div");
+      resultDiv.innerHTML = `
+        <h2>Rezultati:</h2>
+        <p>Uneseni brojevi: ${numbers}</p>
+        <p>Aritmetička sredina: ${arithmeticMean}</p>
+        <p>Geometrijska sredina: ${geometricMean}</p>
+      `;
+      document.body.appendChild(resultDiv);
+    }
+
+
+    window.onload = function() {
+      calculateMeans();
+    };
+
+
+    </script>
+    
+</body>
+</html>
